@@ -1,0 +1,73 @@
+body{
+    font-family: "Poppins",sans-serif;
+}
+
+img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.movies__btn-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,300px);
+    justify-content: center;
+    grid-row-gap: 2rem;
+}
+
+.movies__wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 350px));
+}
+
+.movies__card{
+    overflow: hidden;
+    place-items: space-between;
+    cursor: pointer;
+}
+
+.animateIn{
+    animation: animateIn 1000ms ease-in-out forwards;
+}
+
+.animateOut {
+    animation: animateOut 1000ms ease-in-out forwards;
+}
+
+
+
+.skeleton{
+    width: 100%;
+    height: .125rem;
+    animation: lazyload 1000ms linear infinite alternate;
+}
+
+.skeleton-img{
+    animation: lazyload 1000ms linear infinite alternate;
+}
+
+@keyframes animateIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes animateOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes lazyload {
+    0%{
+        background-color: hsl(200,20%,70%);
+    }
+    100%{
+        background-color: hsl(200, 20%, 95%);
+    }
+}
